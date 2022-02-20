@@ -1,3 +1,6 @@
+import torch
+
+
 class Vocab(object):
     """ Converts word tokens to indices, and vice versa. """
 
