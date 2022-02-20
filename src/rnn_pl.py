@@ -173,7 +173,8 @@ if __name__ == "__main__":
     data_module = TextDateModule(train, valid, test)
     model = TextLightningModule(vocab_size)
 
-    tb_logger = pl_loggers.TensorBoardLogger("./lightning_logs/", name="network_1")
+    tb_logger = pl_loggers.TensorBoardLogger("./lightning_logs/", name="RNN")
+    # Define your gpu here
     trainer = pl.Trainer(logger=tb_logger, max_epochs=20, gpus=1)
     trainer.fit(model, data_module)
 

@@ -176,7 +176,8 @@ if __name__ == "__main__":
     lstm_data_module = TextDateModule(train, valid, test)
     lstm_model = TextLSTMModule(vocab_size)
 
-    tb_logger = pl_loggers.TensorBoardLogger("./lightning_logs/", name="network_2")
+    tb_logger = pl_loggers.TensorBoardLogger("./lightning_logs/", name="LSTM")
+    # Define your gpu here
     trainer = pl.Trainer(logger=tb_logger, gradient_clip_val=0.5, max_epochs=20, gpus=1)
     trainer.fit(lstm_model, data_module)
 
