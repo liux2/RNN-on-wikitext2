@@ -22,7 +22,7 @@ class Prep:
         return lines list.
         list[list[word]]
         """
-
+        print("tokenizing...")
         # Create token list
         sent_tokens = [word_tokenize(t) for t in sent_tokenize(corpus)]
         random.shuffle(sent_tokens)
@@ -40,6 +40,7 @@ class Prep:
 
     def building_vocab(self, corpus):
         """Building vocab list from training set."""
+        print("counting frequences...")
         for w in corpus:
             # the word has already been found
             if w in self.word_freqs:
