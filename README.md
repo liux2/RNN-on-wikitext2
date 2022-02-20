@@ -72,6 +72,9 @@ pip install tensorboard
 To run the project, navigate to `./src` and use commend `python lstm_pl.py` or
 `rnn_pl.py`. Alternatively, you can load the jupyter notebook.
 
+To view the result, run the commend `tensorboard --logdir ./lightning_logs/` in
+`./src`, or view in Colab.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE)
